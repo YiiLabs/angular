@@ -1,0 +1,16 @@
+<div data-ng-controller="commentsCtrl" data-ng-show="show">
+    <div data-ng-repeat="comment in comments" class="row comment-row">
+        <div class="col-md-2 pull-left">
+            <span class="comment-author-normal" data-ng-class="{admin: comment.status == 1}">{{comment.author}}</span><br/>
+            <span class="comment-date">{{comment.date | date:'dd-MMMM-yyyy'}}</span>
+        </div>
+        <img src="images/dialog_arrow.png" alt="" class="comment-dialog-arrow" />
+        <div class="col-md-9 comment-content pull-right">
+            <div class="comment-text">{{comment.text}}</div>
+        </div>
+    </div>
+
+    <button class="comment-button center-block" data-ng-click="loadMore()" data-ng-show="showButton">
+        <span>Загрузить еще</span>
+    </button>
+</div>

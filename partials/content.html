@@ -1,0 +1,17 @@
+<div data-ng-controller="topContentCtrl" id="top-content">
+    <span id="header-title">{{data.description}}</span>
+    <p id="header-text">{{data.text}}</p>
+    <div class="big-image"><img src="" alt="" width="800" /></div>
+    <div class="big-image"><img src="" alt="" width="800" /></div>
+    <div data-ng-repeat="image in data.images" class="images">
+        <div class="image-box">
+            <div class="image-inn">
+                <img data-ng-src="{{image.path}}" alt="" width="185" height="123" />
+            </div>
+            <div class="hover-img">
+                <img src="images/zoom_image.png" alt="" width="185" height="123" data-ng-click="zoomImage()" />
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
